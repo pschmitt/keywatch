@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Remote button -> app. The scan code (8 hex digits, from `getevent` as `0004 0004 <scan>`) tells
+         the YouTube button (000c0077) from the Netflix button (000c0078): both send key 0xf0.
+         The Star button sends 000c0186 (key 0x1a7). Netflix is left to the system. -->
+    <string-array name="app_keys" translatable="false">
+        <item>000c0077:com.google.android.youtube.tv</item>
+        <item>000c0186:org.jellyfin.androidtv</item>
+    </string-array>
+</resources>
