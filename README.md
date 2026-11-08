@@ -36,13 +36,13 @@ command now and then gets no answer, so every command has a 10 s limit and is re
 ## Install
 
 ```sh
-nix-shell shell.nix   # or any JDK 17 with the Android SDK 34 and build-tools 34.0.0
+nix-shell shell.nix   # or any JDK 17 with the Android SDK 34 and build-tools 36.0.0
 ./gradlew assembleRelease
 adb install -r app/build/outputs/apk/release/app-release.apk
 adb shell am start -n com.pschmitt.keywatch/.MainActivity
 ```
 
-On NixOS pass `-Pandroid.aapt2FromMavenOverride=$ANDROID_HOME/build-tools/34.0.0/aapt2`.
+On NixOS pass `-Pandroid.aapt2FromMavenOverride=$ANDROID_HOME/build-tools/36.0.0/aapt2`.
 The release build is signed with the debug key; it is meant to be sideloaded.
 
 Start the app **once** after installing: Android does not deliver the boot broadcast to an app that was
