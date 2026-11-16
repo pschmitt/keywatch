@@ -1,0 +1,13 @@
+name: 'KeyWatch'
+summary: 'Launch apps with Android TV remote buttons'
+license: GPL-3.0-only
+categories:
+  - System
+description: |
+  KeyWatch starts an app from a button on an Android TV remote without an accessibility service, so holding volume up or down keeps repeating.
+
+  Remapping apps work through an accessibility service that filters key events, and on some firmware that service drops the auto-repeat of a held volume key. KeyWatch does it the other way round: a small shell script runs as the shell user on the TV, reads the remote's input device and starts the app. The app only keeps that script installed and running.
+
+  Requirements: adbd listening on TCP port 5555 on the TV, and Android 11 or later. The TV asks once to allow the app's own adb key. Tested on a Google TV Streamer with its stock remote.
+
+  Source and setup instructions: https://github.com/pschmitt/keywatch
